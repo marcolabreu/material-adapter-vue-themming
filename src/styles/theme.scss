@@ -1,0 +1,38 @@
+@use '~@material/theme'  with (
+  $primary: #FEDBD0,
+  $on-primary: #442C2E,
+  $secondary: #FEEAE6,
+  $on-secondary: #442C2E,
+  $surface: #FFFBFA,
+  $on-surface: #442C2E,
+  $background: #FFFFFF,
+  //$on-background: #442C2E, // Causes the error bellow
+);
+
+/*
+Module build failed (from ./node_modules/sass-loader/dist/cjs.js):
+SassError: This module was already loaded, so it can't be configured using "with".
+   ┌──> node_modules/@material/theme/_index.scss
+4  │   @forward "./functions";
+   │   ^^^^^^^^^^^^^^^^^^^^^^ new load
+   ╵
+   ┌──> node_modules/@material/theme/_variables.scss
+25 │   @use "./functions";
+   │   ━━━━━━━━━━━━━━━━━━ original load
+   ╵
+   ┌──> /usr/local/var/vue-material-adapter/examples/basic-vue-cli/src/styles/theme.scss
+1  │ ┌ @use '@material/theme'  with (
+2  │ │   $primary: #FEDBD0,
+3  │ │   $on-primary: #442C2E,
+4  │ │   $secondary: #FEEAE6,
+5  │ │   $on-secondary: #442C2E,
+6  │ │   $surface: #FFFBFA,
+7  │ │   $on-surface: #442C2E,
+8  │ │   $background: #FFFFFF,
+9  │ │   $on-background: #442C2E,
+10 │ │ );
+   │ └─^ configuration
+   ╵
+  node_modules/@material/theme/_index.scss 4:1  @use
+  stdin 1:1                                     root stylesheet
+*/
