@@ -1,3 +1,1 @@
-import "./theme.scss";
-import "./button.scss";
-import "./textfield.scss";
+import "./_index.scss";

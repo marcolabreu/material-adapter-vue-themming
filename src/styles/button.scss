@@ -1,2 +1,10 @@
-@use '~@material/button/mdc-button';
+@use "~@material/button" with (
+  $height: 32px
+);
 
+@include button.core-styles;
+
+.custom-text-button,
+.custom-outlined-button {
+  @include button.ink-color(on-primary);
+}

@@ -2,8 +2,8 @@
   <div>
     <h2>Buttons</h2>
     <div>
-      <mcw-button>Button</mcw-button>
-      <mcw-button outlined>Button</mcw-button>
+      <mcw-button class="custom-text-button">Button</mcw-button>
+      <mcw-button outlined class="custom-outlined-button">Button</mcw-button>
       <mcw-button raised>Button</mcw-button>
       <mcw-button raised disabled>Button</mcw-button>
     </div>
