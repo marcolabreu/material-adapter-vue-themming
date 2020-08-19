@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div class="main">
     <img alt="Vue logo" width="200" src="../assets/logo.png" />
     <h1>{{ header }}</h1>
     <p>
@@ -34,6 +34,11 @@ export default {
 
 <!-- "scoped" limits the styles to this component -->
 <style scoped>
+.main {
+  max-width: 700px;
+  margin: auto;
+  padding: 0 2em;
+}
 h3 {
   margin: 40px 0 0;
 }

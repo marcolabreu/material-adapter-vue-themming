@@ -4,7 +4,6 @@
 @use '~@material/textfield' with (
   $height: 46px,
   $focused-label-color: #442C2E
-
 );
 
 @include textfield.core-styles;
