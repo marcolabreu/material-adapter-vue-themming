@@ -3,9 +3,9 @@
     <img alt="Vue logo" width="200" src="../assets/logo.png" />
     <h1>{{ header }}</h1>
     <p>
-      A CodeSandbox using components from
-      <a href="https://github.com/matsp/material-components-vue"
-        >material-components-vue</a
+      A CodeSandbox applying theming to Material Design Web Components in Vue using
+      <a href="https://github.com/pgbross/vue-material-adapter"
+        >vue-material-adapter</a
       >
       project.
     </p>
