@@ -23,5 +23,4 @@
   $on-error: if(
       functions.contrast-tone(colors.$theme-error) == 'dark', colors.$theme-on-error, #fff
   ),
-
 );

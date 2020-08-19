@@ -3,11 +3,11 @@
     <h2>Text Fields</h2>
 
     <form>
-      <p>Field live data: {{ formData.outlined }}</p>
+      <p>Outlined data: {{ formData.outlined }}</p>
       <mcw-textfield
         outline
         v-model="formData.outlined"
-        label="Label"
+        label="Outlined"
       ></mcw-textfield>
     </form>
   </div>

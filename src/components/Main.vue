@@ -33,7 +33,7 @@ export default {
 </script>
 
 <!-- "scoped" limits the styles to this component -->
-<style scoped>
+<style scoped lang="scss">
 .main {
   max-width: 700px;
   margin: auto;
