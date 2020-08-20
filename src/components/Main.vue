@@ -3,7 +3,8 @@
     <img alt="Vue logo" width="200" src="../assets/logo.png" />
     <h1>{{ header }}</h1>
     <p>
-      A CodeSandbox applying theming to Material Design Web Components in Vue using
+      A CodeSandbox applying theming to Material Design Web Components in Vue
+      using
       <a href="https://github.com/pgbross/vue-material-adapter"
         >vue-material-adapter</a
       >

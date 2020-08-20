@@ -12,7 +12,7 @@ window
   .matchMedia("(prefers-color-scheme: dark)")
   .addEventListener("change", e => {
     state.preferDark = e.matches;
-    console.log("Dark mode is " + state.preferDark);
+    // console.log("Dark mode is " + state.preferDark);
   });
 
 export default {
