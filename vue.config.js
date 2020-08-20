@@ -17,13 +17,16 @@ module.exports = {
     }
   },
   configureWebpack: {
-    plugins: [
-      new BundleAnalyzerPlugin(),
-      new CompressionPlugin()
-    ],
+    plugins: [new BundleAnalyzerPlugin(), new CompressionPlugin()],
     optimization: {
       splitChunks: {
-        chunks: "all"
+        cacheGroups: {
+          vueMaterialAdapter: {
+            test: /[\\/]node_modules[\\/]vue-material-adapter[\\/]/,
+            name: "vue-material-adapter",
+            chunks: "all"
+          }
+        }
       }
     }
   }
