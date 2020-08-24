@@ -9,16 +9,16 @@ module.exports = {
       sass: {
         sassOptions: {
           includePaths: ["node_modules/@material", "node_modules/nomalize.css"]
-            .map(d => path.join(__dirname, d))
-            .reduce((a, c) => a.concat(c), [])
-        }
-      }
-    }
+            .map((d) => path.join(__dirname, d))
+            .reduce((a, c) => a.concat(c), []),
+        },
+      },
+    },
   },
   configureWebpack: {
     plugins: [
       // new BundleAnalyzerPlugin(),
-      new CompressionPlugin({ test: /\.(js|css)(\?.*)?$/i })
+      new CompressionPlugin({ test: /\.(js|css)(\?.*)?$/i }),
     ],
     optimization: {
       splitChunks: {
@@ -27,10 +27,10 @@ module.exports = {
           vueMaterialAdapter: {
             test: /[\\/]node_modules[\\/]vue-material-adapter[\\/]/,
             name: "vue-material-adapter",
-            chunks: "all"
-          }
-        }
-      }
-    }
-  }
+            chunks: "all",
+          },
+        },
+      },
+    },
+  },
 };

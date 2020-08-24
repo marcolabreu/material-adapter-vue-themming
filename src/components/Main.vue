@@ -25,11 +25,11 @@ export default {
   name: "Main",
   components: {
     Buttons,
-    TextFields
+    TextFields,
   },
   props: {
-    header: String
-  }
+    header: String,
+  },
 };
 </script>
 
