@@ -1,0 +1,9 @@
+@use "../../../node_modules/@material/floating-label/mdc-floating-label";
+@use "../../../node_modules/@material/line-ripple/mdc-line-ripple";
+@use "../../../node_modules/@material/notched-outline/mdc-notched-outline";
+@use '../../../node_modules/@material/textfield' with (
+  $height: 46px,
+  $focused-label-color: #442C2E
+);
+
+@include textfield.core-styles;

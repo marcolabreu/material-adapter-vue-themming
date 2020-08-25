@@ -1,6 +1,6 @@
 <template>
-  <div id="app">
-    <Main header="Material Components" />
+  <div :style="styleVars" id="app">
+    <Main :header="preferDark ? 'Material Dark' : 'Material Light'" />
   </div>
 </template>
 
@@ -10,21 +10,28 @@ const state = { preferDark: false };
 
 window
   .matchMedia("(prefers-color-scheme: dark)")
-  .addEventListener("change", e => {
+  .addEventListener("change", (e) => {
     state.preferDark = e.matches;
-    // console.log("Dark mode is " + state.preferDark);
   });
 
 export default {
   name: "App",
   data() {
     return {
-      preferDark: state.preferDark
+      preferDark: state.preferDark,
     };
   },
   components: {
-    Main
-  }
+    Main,
+  },
+  computed: {
+    styleVars() {
+      return {
+        "--theme": state.preferDark ? "dark" : "light",
+        "--height": "60px",
+      };
+    },
+  },
 };
 </script>
 
@@ -39,6 +46,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: var(--height);
 }
 </style>

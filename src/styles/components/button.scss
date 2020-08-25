@@ -1,5 +1,5 @@
 // FIXME: riple not respecting masked in Safari
-@use "~@material/button" with (
+@use "../../../node_modules/@material/button" with (
   $height: 32px
 );
 
