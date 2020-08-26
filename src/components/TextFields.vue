@@ -19,10 +19,10 @@ export default {
   data() {
     return {
       formData: {
-        outlined: ""
-      }
+        outlined: "",
+      },
     };
-  }
+  },
 };
 </script>
 

@@ -19,6 +19,6 @@ export default {
 <!-- "scoped" limits the styles to this component -->
 <style scoped lang="scss">
 .mdc-button {
-  margin: 0 5px 0;
+  margin: 0 5px;
 }
 </style>

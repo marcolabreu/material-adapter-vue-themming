@@ -1,0 +1,6 @@
+// FIXME: riple not respecting masked in Safari
+@use '~@material/button' with (
+  $height: 32px
+);
+
+@include button.core-styles;

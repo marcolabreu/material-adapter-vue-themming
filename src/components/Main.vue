@@ -36,10 +36,13 @@ export default {
 <!-- "scoped" limits the styles to this component -->
 <style scoped lang="scss">
 .main {
+  margin: 40px auto;
   max-width: 700px;
-  margin: auto;
+  min-width: 468px;
   padding: 0 2em;
+  text-align: center;
 }
+
 h3 {
   margin: 40px 0 0;
 }
