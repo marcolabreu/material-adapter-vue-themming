@@ -1,6 +1,23 @@
 // FIXME: riple not respecting masked in Safari
-@use '~@material/button' with (
-  $height: 32px
-);
+@use '../colors';
+@use '~@material/button' as component;
 
-@include button.core-styles;
+@include component.core-styles;
+
+//@media screen and (prefers-color-scheme: dark) {
+//  @include button.disabled-icon-color(white)
+//}
+
+.mdc-button {
+  @include component.height(32px);
+
+  @media screen and (prefers-color-scheme: dark) {
+
+    @include component.disabled-container-fill-color(colors.$disabled-container-fill-on-dark);
+    @include component.disabled-icon-color(colors.$text-disabled-on-dark);
+    @include component.disabled-ink-color(colors.$text-disabled-on-dark);
+    @include component.disabled-outline-color(colors.$disabled-container-fill-on-dark);
+    @include component.outline-color(colors.$disabled-container-fill-on-dark);
+    @include component.outline-width(2px);
+  }
+}

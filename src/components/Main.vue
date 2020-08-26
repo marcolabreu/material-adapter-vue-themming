@@ -1,14 +1,15 @@
 <template>
   <div class="main">
-    <img alt="Vue logo" width="200" src="../assets/logo.png" />
+    <img alt="Vue logo" width="200" src="../assets/logo.svg" />
     <h1>{{ header }}</h1>
     <p>
-      A CodeSandbox applying theming to Material Design Web Components in Vue
-      using
+      Material Design Web Components themed for
+      <a href="https://www.mixvoip.com">MIXvoip</a>, the fastest growing VoIP provider in Luxembourg.
+      To speed-up development we adopted
       <a href="https://github.com/pgbross/vue-material-adapter"
         >vue-material-adapter</a
       >
-      project.
+      as our component wrapper.
     </p>
 
     <Buttons />
@@ -55,9 +56,5 @@ ul {
 li {
   display: inline-block;
   margin: 0 10px;
-}
-
-a {
-  color: #42b983;
 }
 </style>

@@ -1,54 +1,40 @@
-$primary-050: #e7f5e6;
-$primary-600: #2aa222;
-$primary-900: #006100;
+$background-light: #fcfffb;
+$background-dark: #131200;
 
-$secondary-050: #fbeae7;
-$secondary-500: #f96318;
-$secondary-900: #ba4203;
+$error: #d62018;
+$error-desaturated: #f39691;
 
-// documentation https://material.io/develop/web/theming/color#color-scheme
-@use '~@material/theme'  with (
-  $background: $primary-050,
-  $primary: $primary-600,
-  $on-primary: white,
-  $secondary: $secondary-500,
-  $on-secondary: #000,
-  $surface: #fff,
-  $on-surface: #000,
-  $error: #b00020,
-  $on-error: #fff,
+$primary: #22a299;
+$primary-desaturated: #7ec8c4;
+$primary-light: #61d4ca;
+$primary-dark: #00736b;
 
-  $text-colors: (
-    dark: (
-      primary: rgba(black, 0.87),
-      secondary: rgba(black, 0.54),
-      hint: rgba(black, 0.38),
-      disabled: rgba(black, 0.38),
-      icon: rgba(black, 0.38),
-    ),
-    light: (
-      primary: white,
-      secondary: rgba(white, 0.7),
-      hint: rgba(white, 0.5),
-      disabled: rgba(white, 0.5),
-      icon: rgba(white, 0.5),
-    ),
-  )
-);
+$secondary: #65d454;
+$secondary-desaturated: #b7ebac;
+$secondary-light: #9aff84;
+$secondary-dark: #2aa222;
+$secondary-desaturated: #a0d79a;
 
-:root {
-  background: $primary-050;
+$secondary-dark-complementary: #9922a2;
+$secondary-dark-complementary-desaturated: #cd90d0;
 
-  @media screen and (prefers-color-scheme: dark) {
-    // documentation https://material.io/develop/web/theming/color#css-custom-properties
-    --mdc-theme-background: #{$primary-900};
-    --mdc-theme-primary: #{$primary-900};
-    --mdc-theme-on-primary: #fff;
-    --mdc-theme-secondary: #{$secondary-900};
-    --mdc-theme-on-secondary: #fff;
-    --mdc-theme-surface: #fff;
-    --mdc-theme-on-surface: #fff;
+$pumpkin: #f96318;
+$pumpkin-desaturated: #fcaf8f;
 
-    background: $secondary-900;
-  }
-}
+$varden: #fdf7d7;
+
+$black: #202000;
+$text-primary-on-light: rgba($black, 0.87);
+$text-secondary-on-light: rgba($black, 0.54);
+$text-hint-on-light: rgba($black, 0.38);
+$text-disabled-on-light: rgba($black, 0.38);
+$text-icon-on-light: rgba($black, 0.38);
+
+$white: #fffffb;
+$text-primary-on-dark: $white;
+$text-secondary-on-dark: rgba($white, 0.7);
+$text-hint-on-dark: rgba($white, 0.5);
+$text-disabled-on-dark: rgba($white, 0.5);
+$text-icon-on-dark: rgba($white, 0.5);
+
+$disabled-container-fill-on-dark: rgba($white, 0.2);

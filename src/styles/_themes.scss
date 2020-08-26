@@ -1,0 +1,77 @@
+@use 'colors';
+@use '~@material/theme'  with (
+  $background: colors.$background-light,
+
+  $primary: colors.$primary,
+  $on-primary: colors.$white,
+
+  $secondary: colors.$secondary,
+  $on-secondary: colors.$black,
+
+  $surface: colors.$background-light,
+  $on-surface: colors.$black,
+
+  $error: colors.$error,
+  $on-error: colors.$white,
+
+  $text-colors: (
+    dark: (
+      primary: colors.$text-primary-on-light,
+      secondary: colors.$text-secondary-on-light,
+      hint: colors.$text-hint-on-light,
+      disabled: colors.$text-disabled-on-light,
+      icon: colors.$text-icon-on-light,
+    ),
+    light: (
+      primary: colors.$text-primary-on-dark,
+      secondary: colors.$text-secondary-on-dark,
+      hint: colors.$text-hint-on-dark,
+      disabled: colors.$text-disabled-on-dark,
+      icon: colors.$text-icon-on-dark,
+    ),
+  )
+);
+
+:root {
+  background: colors.$background-light;
+
+  a {
+    color: colors.$primary;
+  }
+
+  @media screen and (prefers-color-scheme: dark) {
+    // documentation https://material.io/develop/web/theming/color
+    --mdc-theme-background: #{colors.$background-dark};
+
+    --mdc-theme-primary: #{colors.$primary-desaturated};
+    --mdc-theme-on-primary: #{colors.$black};
+
+    --mdc-theme-secondary: #{colors.$secondary-desaturated};
+    --mdc-theme-on-secondary: #{colors.$black};
+
+    --mdc-theme-surface: #{colors.$background-dark};
+    --mdc-theme-on-surface: #{colors.$white};
+
+    --mdc-theme-error: #{colors.$error-desaturated};
+    --mdc-theme-on-error: #{colors.$white};
+
+    --text-primary-on-light: #{colors.$text-primary-on-light};
+    --text-secondary-on-light: #{colors.$text-secondary-on-light};
+    --text-hint-on-light: #{colors.$text-hint-on-light};
+    --text-disabled-on-light: #{colors.$text-disabled-on-light};
+    --text-icon-on-light: #{colors.$text-icon-on-light};
+
+    --text-primary-on-dark: #{colors.$text-primary-on-dark};
+    --text-secondary-on-dark: #{colors.$text-secondary-on-dark};
+    --text-hint-on-dark: #{colors.$text-hint-on-dark};
+    --text-disabled-on-dark: #{colors.$text-disabled-on-dark};
+    --text-icon-on-dark: #{colors.$text-icon-on-dark};
+
+    background: #{colors.$background-dark};
+    color: #{colors.$white};
+
+    a {
+      color: colors.$primary-desaturated;
+    }
+  }
+}
