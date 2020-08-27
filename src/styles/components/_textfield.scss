@@ -1,9 +1,27 @@
+@use '../colors';
 @use '~@material/floating-label/mdc-floating-label';
 @use '~@material/line-ripple/mdc-line-ripple';
 @use '~@material/notched-outline/mdc-notched-outline';
-@use '~@material/textfield' with (
-  $height: 46px,
-  $focused-label-color: #442C2E
-);
+@use '~@material/textfield' as component;
 
-@include textfield.core-styles;
+@include component.core-styles;
+
+.mdc-textfield {
+  @include component.outlined-height(36px);
+
+  @media screen and (prefers-color-scheme: dark) {
+
+    // TODO: Style disabled states
+    @include component.disabled-ink-color(colors.$text-disabled-on-dark);
+    @include component.ink-color(colors.$text-primary-on-dark);
+    @include component.disabled-label-color(colors.$primary-desaturated);
+    @include component.label-color(colors.$text-hint-on-dark);
+    @include component.disabled-placeholder-color(colors.$text-hint-on-dark);
+    @include component.placeholder-color(colors.$text-hint-on-dark);
+
+    @include component.disabled-outline-color(colors.$disabled-container-fill-on-dark);
+    @include component.focused-outline-color(colors.$primary-desaturated);
+    @include component.hover-outline-color(colors.$text-secondary-on-dark);
+    @include component.outline-color(colors.$text-icon-on-dark);
+  }
+}

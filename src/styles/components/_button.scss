@@ -17,7 +17,6 @@
     @include component.disabled-icon-color(colors.$text-disabled-on-dark);
     @include component.disabled-ink-color(colors.$text-disabled-on-dark);
     @include component.disabled-outline-color(colors.$disabled-container-fill-on-dark);
-    @include component.outline-color(colors.$disabled-container-fill-on-dark);
-    @include component.outline-width(2px);
+    @include component.outline-color(colors.$text-icon-on-dark);
   }
 }
